@@ -143,7 +143,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::error()
                 ->throwable($throwable)
                 ->requestId($requestId)
@@ -168,7 +168,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::error()
                 ->throwable($throwable)
                 ->requestHeader($header)
@@ -209,7 +209,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::log()
                 ->severity($severity)
                 ->message($message)
@@ -231,7 +231,7 @@ class Highlight
     {
         self::requireInitialization();
 
-        self::captureRecord($builder->build());
+        self::$highlight->captureRecord($builder->build());
     }
 
     /**
