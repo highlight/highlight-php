@@ -17,7 +17,7 @@ class HighlightLogger {
 		$this->logger = $openTelemetry->getLogger("highlight-php");
     }
 
-    public function process(HighlightLogRecord $record) {
+    public function process(HighlightLogRecord $record): void {
         $severity = $record->getSeverity();
         $logRecord = new LogRecord($record->getMessage());
 

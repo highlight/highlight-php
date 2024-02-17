@@ -222,7 +222,7 @@ class Highlight
     /**
      * Captures a record using a record builder and sends it to Highlight.
      *
-     * @param HighlightRecord\Builder $builder the builder to use for the record
+     * @param HighlightRecordBuilder $builder the builder to use for the record
      *
      * @throws HighlightIllegalStateException  if Highlight is not initialized
      * @throws HighlightInvalidRecordException if the record is invalid

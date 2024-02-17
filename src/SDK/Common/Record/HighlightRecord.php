@@ -51,7 +51,7 @@ class HighlightRecord
     /**
      * Returns the attributes associated with the record.
      *
-     * @return Attribute the attributes associated with the record
+     * @return Attributes the attributes associated with the record
      */
     public function getAttributes(): Attributes
     {

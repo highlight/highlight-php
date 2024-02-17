@@ -27,22 +27,22 @@ final class Priority
         return $this->difference;
     }
 
-    public static function LOW()
+    public static function LOW(): self
     {
         return new Priority(self::LOW);
     }
 
-    public static function NORMAL()
+    public static function NORMAL(): self
     {
         return new Priority(self::NORMAL);
     }
 
-    public static function MEDIUM()
+    public static function MEDIUM(): self
     {
         return new Priority(self::MEDIUM);
     }
 
-    public static function HIGH()
+    public static function HIGH(): self
     {
         return new Priority(self::HIGH);
     }    

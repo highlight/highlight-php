@@ -20,7 +20,7 @@ class HighlightTracer
 		$this->tracer = $highlightOpenTelemetry->getTracerProvider()->getTracer('highlight-php'); 
     }
 
-    public function process(HighlightErrorRecord $record)
+    public function process(HighlightErrorRecord $record): void
     {
         $spanBuilder = $this->tracer->spanBuilder('highlight-ctx');
 
