@@ -6,25 +6,25 @@ on:
 
 jobs:
   tests:
-    name: "CI"
+    name: CI
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout"
-        uses: "actions/checkout@v3"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: "Install PHP"
-        uses: "shivammathur/setup-php@v2"
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
         with:
           coverage: "none"
           extensions: "opentelemetry"
           php-version: "8.2"
           tools: composer
 
-      - name: "Install dependencies"
-        uses: "ramsey/composer-install@v2"
+      - name: Install Dependencies
+        uses: ramsey/composer-install@v2
         with:
             composer-options: "--ansi --no-interaction --no-progress --prefer-dist"
 
-      - name: "Run tests"
-        run: "composer test"
+      - name: Run Tests
+        run: composer test
