@@ -143,7 +143,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::error()
                 ->throwable($throwable)
                 ->requestId($requestId)
@@ -168,7 +168,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::error()
                 ->throwable($throwable)
                 ->requestHeader($header)
@@ -209,7 +209,7 @@ class Highlight
     ): void {
         self::requireInitialization();
 
-        self::captureRecord(
+        self::$highlight->captureRecord(
             HighlightRecord::log()
                 ->severity($severity)
                 ->message($message)
@@ -222,7 +222,7 @@ class Highlight
     /**
      * Captures a record using a record builder and sends it to Highlight.
      *
-     * @param HighlightRecord\Builder $builder the builder to use for the record
+     * @param HighlightRecordBuilder $builder the builder to use for the record
      *
      * @throws HighlightIllegalStateException  if Highlight is not initialized
      * @throws HighlightInvalidRecordException if the record is invalid
@@ -231,7 +231,7 @@ class Highlight
     {
         self::requireInitialization();
 
-        self::captureRecord($builder->build());
+        self::$highlight->captureRecord($builder->build());
     }
 
     /**

@@ -79,5 +79,9 @@
 		"rector/rector": ">=0.15.20",
 		"symfony/http-client": "^5.2",
 		"symfony/yaml": "^6 || ^5"
-	}
+	},
+  "scripts": {
+    "testSilent": "vendor/bin/phpunit tests",
+    "test": "@testSilent --verbose"
+  }
 }

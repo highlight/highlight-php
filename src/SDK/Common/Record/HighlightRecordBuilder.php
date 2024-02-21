@@ -22,7 +22,7 @@ abstract class HighlightRecordBuilder
     protected ?string $requestId;
 
     /**
-     * Constructs a new instance of `Builder`.
+     * Constructs a new instance of `HighlightRecordBuilder`.
      */
     protected function __construct(?HighlightRecord $record = null)
     {
@@ -43,7 +43,7 @@ abstract class HighlightRecordBuilder
      * Sets the time the record occurred.
      *
      * @param DateTimeImmutable $timeOccurred the time the record occurred
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function timeOccurred(DateTimeImmutable $timeOccurred): self
     {
@@ -55,7 +55,7 @@ abstract class HighlightRecordBuilder
      * Sets the user session and request id associated with the record.
      *
      * @param HighlightHeader $header associated with the record.
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function requestHeader(HighlightHeader $header): self
     {
@@ -68,7 +68,7 @@ abstract class HighlightRecordBuilder
      * Sets the user session associated with the record using a session ID string.
      *
      * @param string|null $sessionId the session ID string to use as the user session ID
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function userSessionString(?string $sessionId): self
     {
@@ -80,7 +80,7 @@ abstract class HighlightRecordBuilder
      * Sets the user session associated with the record.
      *
      * @param HighlightSessionId|null $userSession the user session associated with the record
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function userSession(?HighlightSessionId $userSession): self
     {
@@ -92,7 +92,7 @@ abstract class HighlightRecordBuilder
      * Sets the request ID associated with the record.
      *
      * @param string|null $requestId the request ID associated with the record
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function requestId(?string $requestId): self
     {
@@ -104,7 +104,7 @@ abstract class HighlightRecordBuilder
      * Applies the specified closure to the attributes builder.
      *
      * @param callable $function the closure to apply to the attributes builder
-     * @return this `Builder` instance
+     * @return this `HighlightRecordBuilder` instance
      */
     public function attributes(callable $function): self
     {

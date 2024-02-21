@@ -16,7 +16,7 @@ class HighlightHeader
         $this->requestId = $requestId;
     }
 
-    public static function parse($header): HighlightHeader
+    public static function parse($header): ?HighlightHeader
     {
         $split = explode('/', $header);
         if (count($split) == 2) {
